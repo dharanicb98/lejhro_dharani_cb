@@ -1,13 +1,20 @@
 import './App.css';
+import useScrollPosition from './hooks';
 import BlogPage from './pages/blogpage';
 import Footer from './pages/footer';
-import Header from './pages/navber';
+import Headers from './pages/head';
+import HeadPage from './pages/navber';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 const App = () => {
+  const hasScrolled = useScrollPosition();
+  console.log('hasScrolled', hasScrolled)
   return (
-    <div>
-      <Header />
+    <div style={{position:"relative"}}>
+       {hasScrolled &&  <Headers /> }
+      <HeadPage />
       <BlogPage />
       <Footer />
     </div>

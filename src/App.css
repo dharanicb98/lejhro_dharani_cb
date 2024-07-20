@@ -10,3 +10,93 @@
 .navbar-custom .nav-link:hover {
   color: #333;
 }
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.custom-link {
+  color: #3a3632;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 10px;
+  text-align: left !important;
+  text-decoration: none; 
+}
+
+.custom-link:hover {
+  color: #1890ff;
+}
+.social-links {
+  gap: 45px; 
+}
+
+.social-links i {
+  font-size: 24px; 
+  color: #000; 
+  transition: color 0.3s ease; 
+}
+
+.social-links a {
+  text-decoration: none; 
+}
+
+.social-links a:hover i {
+  color: #1890ff; 
+}
+.hamburger-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer;
+ padding-bottom: 10px;
+  color: #000; /* Default color */
+  transition: color 0.3s ease;
+}
+
+.hamburger-button:hover {
+  color: #1890ff; /* Change color on hover */
+}
+
+.header {
+  position: fixed;
+  top: 5;
+  left: 0;
+  padding: 100px;
+  width: 100%;
+  background-color: white; /* Adjust color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  /* transition: transform 0.3s ease; */
+  transform: translateY(-100%);
+  z-index: 1000; /* Ensure header is on top */
+}
+
+.header.show {
+  transform: translateY(0);
+}
+
+
